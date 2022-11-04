@@ -1,5 +1,11 @@
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 .grid_box {
-    height: 16px;
-    width: 16px;
+    height: 50px;
+    width: 50px;
     background-color: blue;
 }
