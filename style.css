@@ -1,3 +1,16 @@
+#button_container {
+    display: flex;
+    justify-content: center;
+}
+
+#new_grid_btn {
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    
+}
+
+
 #grid {
     display: flex;
     flex-wrap: wrap;
@@ -5,14 +18,9 @@
 }
 
 .grid_box {
-    height: 25px;
-    width: 25px;
+    min-height: 25px;
+    min-width: 25px;
     background-color: mediumseagreen;
-}
-
-#button_container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    flex: 1, 0, auto;
 }
 

@@ -20,7 +20,7 @@ function colorBoxesOnHover () {
 
 // create a grid of blocks
 function makeAllBlocks (number) {
-    for (i = 0; i <= number; i++) {
+    for (i = 0; i < number; i++) {
         makeBox();
         colorBoxesOnHover();
 }}
@@ -47,9 +47,6 @@ function buttonAction () {
     })
 }
 
-
-
-makeAllBlocks (1000);
 
 
 
