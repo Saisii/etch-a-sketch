@@ -12,15 +12,23 @@
 
 
 #grid {
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
     gap: 4px;
+    width: 940px;
+    justify-content: center; */
 }
 
 .grid_box {
-    min-height: 25px;
-    min-width: 25px;
+    min-height: 16px;
+    min-width: 16px;
     background-color: mediumseagreen;
     flex: 1, 0, auto;
+}
+
+.divFlex {
+    display: flex;
+    margin: 1px;
+    gap: 1px;
+    justify-content: center;
 }
 

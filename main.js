@@ -7,6 +7,20 @@ function makeBox () {
     gridContainer.appendChild(gridContent);
 }
 
+//create div containers for the rows
+function createNewDiv (numberOfDivs) {
+    for (i=0; i < numberOfDivs; i++) {
+        const newDiv = document.createElement('div');
+        newDiv.setAttribute('id', 'row' + i);
+
+        gridContainer.appendChild(newDiv);
+    }
+}
+
+
+
+
+
 //all boxes turn colors on hover
 function colorBoxesOnHover () {
     const colorBox = document.querySelectorAll('.grid_box');
@@ -18,12 +32,30 @@ function colorBoxesOnHover () {
     }
 }
 
-// create a grid of blocks
-function makeAllBlocks (number) {
-    for (i = 0; i < number; i++) {
-        makeBox();
-        colorBoxesOnHover();
-}}
+//create row of blocks
+function makeRow (number) {
+    for (i=0; i < number; i++) {
+        const newDiv = document.createElement('div');
+        let divSelector = document.querySelector('#row' + i);
+        newDiv.setAttribute('id', 'row' + i);
+        newDiv.classList.add('divFlex');
+
+        gridContainer.appendChild(newDiv);
+
+        console.log('created main div' + i);
+        
+        for (j = 0; j < number; j++) {        
+            let gridContent = document.createElement('div');
+            gridContent.classList.add('grid_box');
+
+            newDiv.appendChild(gridContent);
+            colorBoxesOnHover();
+
+            console.log('created secondary div' + i);
+        }
+    }
+}
+
 
 // clear all blocks
 function clearBlocks () {
@@ -43,7 +75,7 @@ function buttonAction () {
     let numOfBlocks = prompt('how many blocks?');
 
     clearBlocks();
-    makeAllBlocks(numOfBlocks);
+    makeRow(numOfBlocks);
     })
 }
 
