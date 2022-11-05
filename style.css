@@ -9,3 +9,10 @@
     width: 25px;
     background-color: mediumseagreen;
 }
+
+#button_container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
